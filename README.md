@@ -1,3 +1,24 @@
+Project Goal: replace contentful with your own API in the previous recipe project (choose any)
+
+Step 1
+- create a node project, start up your express server
+- add the cors middleware to your server http://expressjs.com/en/resources/middleware/cors.html
+- create the GET /recipes route that sends back a json with all the recipes taken from contentful
+
+Step 2
+- create a new frontend project
+- port the code of the previous project to your new one
+- replace the contentful client with axioshttps://github.com/axios/axios
+- perform the get all request with axios on your local server url (most likely http://localhost:5000/recipes)
+
+Step 3
+- deploy your server on heroku
+- deploy your client on netflify, vercel or gh pages (remember to switch between local and production URL)
+
+Step 3+
+- create a route for creating a new recipe (POST)
+- create a form on the frontend to add a new recipe(Bearbeitet)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
