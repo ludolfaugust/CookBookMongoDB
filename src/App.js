@@ -8,16 +8,15 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import axios from "axios";
 
-export const baseUrl = "http://localhost:5000/recipes";
-
 function App() {
+  const baseUrl = "http://localhost:5000/recipes";
   const [recipes, setRecipes] = useState([]);
   // const [isLoading, setIsLoading] = useState(true);
   // const [error, setError] = useState(false)
 
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
-      console.log(setRecipes);
+      setRecipes(response.data.data);
     });
   });
 

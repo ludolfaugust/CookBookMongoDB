@@ -8,14 +8,11 @@ function Posts({ recipes }) {
       <div className="RecipeBox">
         {recipes.map((recipe) => (
           <div className="RecipeContainer">
-            <div className="RecipeTitle">{recipe.fields.name}</div>
+            <div className="RecipeTitle">{recipe.recipeName}</div>
 
             <div className="RecipeImage">
-              <Link to={`/recipes/${recipe.sys.id}`}>
-                <img
-                  src={recipe.fields.image.fields.file.url}
-                  alt={`${recipe.fields.name}`}
-                />
+              <Link to={`/recipes/${recipe._id}`}>
+                <img src={recipe.image} alt={`${recipe.recipeName}`} />
               </Link>
             </div>
           </div>
