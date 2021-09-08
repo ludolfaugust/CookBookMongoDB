@@ -1,6 +1,6 @@
 import React from "react";
 
-function Home({ recipes }) {
+function Home() {
   return (
     <div>
       <div className="Background">
@@ -10,9 +10,9 @@ function Home({ recipes }) {
       <div className="HeaderBottom">
         <div>
           <h1 className="HomeText">
-            The ultimate cookbook with a total of {recipes.length} recipes. Look
-            around, maybe you find something that you would like to cook today.
-            If not, we won't be offended.
+            The ultimate cookbook with a total of recipes. Look around, maybe
+            you find something that you would like to cook today. If not, we
+            won't be offended.
           </h1>
         </div>
       </div>

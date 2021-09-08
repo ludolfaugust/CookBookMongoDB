@@ -6,6 +6,9 @@ import Posts from "./Components/Posts";
 import Post from "./Components/Post";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
+import axios from "axios";
+
+export const baseUrl = "http://localhost:5000/recipes";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -13,15 +16,10 @@ function App() {
   // const [error, setError] = useState(false)
 
   useEffect(() => {
-    
-      .getEntries()
-      .then((response) => {
-        console.log(response.items);
-        console.log(response.items[0].fields.name);
-        setRecipes(response.items);
-      })
-      .catch(console.log("Something went wrong"));
-  }, []);
+    axios.get(baseUrl).then((response) => {
+      console.log(setRecipes);
+    });
+  });
 
   return (
     <div className="App">
