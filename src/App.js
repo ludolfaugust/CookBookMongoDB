@@ -9,7 +9,7 @@ import Home from "./Components/Home";
 import axios from "axios";
 
 function App() {
-  const baseUrl = "http://localhost:5000/recipes";
+  const baseUrl = "https://shielded-beyond-29124.herokuapp.com/recipes";
   const [recipes, setRecipes] = useState([]);
   // const [isLoading, setIsLoading] = useState(true);
   // const [error, setError] = useState(false)

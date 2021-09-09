@@ -6,29 +6,26 @@ const Post = ({ recipes }) => {
   return (
     <div className="SingleRecipeContainer">
       {recipes
-        .filter((recipe) => recipe.sys.id === id)
+        .filter((recipe) => recipe._id === id)
         .map((recipe) => (
           <div className="SingleRecipe">
             <div className="SingleRecipeTitle">
-              <h1>{recipe.fields.name}</h1>
+              <h1>{recipe.recipeName}</h1>
             </div>
             <div className="SingleRecipeHead">
               <div className="SingleRecipeImage">
-                <img
-                  src={recipe.fields.image.fields.file.url}
-                  alt={recipe.fields.name}
-                />
+                <img src={recipe.image} alt={recipe.recipeName} />
               </div>
 
               <div className="SingleRecipeIngredients">
                 <h2>Ingredients</h2>
-                <p>{recipe.fields.ingredients}</p>
+                <p>{recipe.ingredients}</p>
               </div>
             </div>
             <div className="SingleRecipeDescription">
               <p>Step by Step</p>
               <br />
-              {recipe.fields.description}
+              {recipe.description}
             </div>
             <div className="BackButton">
               <Link to="/recipes/">
