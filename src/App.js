@@ -6,6 +6,8 @@ import Posts from "./Components/Posts";
 import Post from "./Components/Post";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
+import Input from "./Components/Input";
+
 import axios from "axios";
 
 function App() {
@@ -36,6 +38,9 @@ function App() {
             </Route>
             <Route>
               <Home recipes={recipes} />
+            </Route>
+            <Route path="/Input">
+              <Input />
             </Route>
           </Switch>
         </main>

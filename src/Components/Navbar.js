@@ -18,6 +18,9 @@ function Navbar() {
           <NavLink className="NavLink" to="/recipes">
             RECIPES
           </NavLink>
+          <NavLink className="NavLink" to="/input">
+            ADD RECIPES
+          </NavLink>
           <NavLink className="NavLink" to="/">
             CONTACT
           </NavLink>

@@ -23,6 +23,11 @@ function Posts({ recipes }) {
           <button>Back Home</button>
         </a>
       </div>
+      <div className="button">
+        <a href="/Input">
+          <button>Add Recipes</button>
+        </a>
+      </div>
     </div>
   );
 }
